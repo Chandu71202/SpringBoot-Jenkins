@@ -14,7 +14,11 @@ import java.util.Optional;
 public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
-
+    
+    @GetMapping("/hi")
+    public String hi(){
+        return "Hi Everyone! Welcome to Natwest";
+    }
     @PostMapping("/addemp")
     public EmployeeInfo addEmployee(@RequestBody EmployeeInfo employee){
 
